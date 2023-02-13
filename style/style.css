@@ -1,0 +1,13 @@
+.status {
+    width: 5%;
+    text-align: center;
+}
+
+.linethrough {
+    text-decoration-line: line-through;
+
+}
+
+.trash {
+    text-align: right;
+}
