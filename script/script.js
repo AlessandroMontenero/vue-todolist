@@ -6,15 +6,15 @@ createApp({
         newTask: '',
         tasks: [
             {
-                text: 'prova1',
+                text: 'Prova 1',
                 done: false
             },
             {
-                text: 'prova2',
+                text: 'Prova 2',
                 done: false
             },
             {
-                text: 'prova3',
+                text: 'Prova 3',
                 done: true
             },
         ]

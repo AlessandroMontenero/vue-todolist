@@ -1,3 +1,14 @@
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+.todo {
+    background-color: white;
+    padding: 3rem;
+    margin-top: 3rem;
+    border-radius: 20px;
+}
+
 .status {
     width: 5%;
     text-align: center;
@@ -5,9 +16,37 @@
 
 .linethrough {
     text-decoration-line: line-through;
+    opacity: 0.6;
+}
 
+.trash,
+.fa-square-check,
+.fa-square-xmark {
+    font-size: 1.2rem;
+    text-align: right;
+    cursor: pointer;
 }
 
 .trash {
-    text-align: right;
+    color: red;
 }
+
+.fa-square-check{
+    color: green;
+}
+
+.fa-square-xmark{
+    color: red;
+}
+/* Hide the browser's default checkbox */
+.checkContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  td {
+    line-height: 2.5rem;
+  }

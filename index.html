@@ -25,9 +25,9 @@
   </head>
   <body>
     <main>
-      <div class="container" id="app">
+      <div class="container todo" id="app">
         <!-- Input task -->
-        <div class="input-group mt-5">
+        <div class="input-group">
           <input
             v-model="newTask"
             @keyup.enter="addTask"
@@ -38,7 +38,7 @@
           />
           <button
             @click="addTask"
-            class="btn btn-outline-secondary"
+            class="btn btn-primary"
             type="button"
             id="button-addon2"
           >
@@ -46,7 +46,7 @@
           </button>
         </div>
         <!-- Task Table -->
-        <table class="table table-borderless mt-5">
+        <table class="table mt-3">
           <thead>
             <th scope="col" class="status">Status</th>
             <th scope="col">Task</th>
@@ -55,7 +55,11 @@
           <tbody class="table-group-divider">
             <tr v-for="(task, index) in tasks">
               <td class="status">
-                <input type="checkbox" id="checkbox" v-model="task.done" />
+                <label class="checkContainer">
+                  <input type="checkbox" id="checkbox" v-model="task.done" />
+                  <i class="fa-regular fa-square-check" v-if="!task.done"></i>
+                  <i class="fa-solid fa-square-xmark" v-else></i>
+                </label>
               </td>
               <td scope="row" :class="{ linethrough: (task.done) }">
                 {{task.text}}
